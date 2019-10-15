@@ -18,4 +18,8 @@ struct Hit: Codable {
     let webformatURL: String?
     let userImageURL: String?
     let previewURL: String?
+    let likes: Int?
+    let favorites: Int?
+    let tags: String?
+
 }

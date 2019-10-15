@@ -192,7 +192,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="WNk-Xc-Fsx">
-                                <rect key="frame" x="186" y="381" width="42" height="258.5"/>
+                                <rect key="frame" x="186" y="381" width="42" height="199"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTK-wH-MAt">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
@@ -218,23 +218,27 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfe-aK-ruW">
-                                        <rect key="frame" x="0.0" y="238" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uB-xO-SLK">
                                 <rect key="frame" x="166" y="717" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Favorites"/>
+                                <connections>
+                                    <action selector="FavoritesButton:" destination="3F9-2Y-UbY" eventType="touchUpInside" id="Nb5-ja-5IW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="m35-08-6n8"/>
                     </view>
+                    <connections>
+                        <outlet property="favoritesLabel" destination="mkw-5p-r53" id="EiA-b9-XdS"/>
+                        <outlet property="imageVIewOutlet" destination="mce-GV-Odc" id="SuU-8x-gCY"/>
+                        <outlet property="likesLabel" destination="MTK-wH-MAt" id="mZ1-Yy-U6t"/>
+                        <outlet property="previewUrlLabel" destination="eve-6A-brA" id="4ms-jf-hKu"/>
+                        <outlet property="tagsLabel" destination="fz9-kj-UAL" id="wP1-fO-ghT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhP-Nu-oUp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

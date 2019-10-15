@@ -14,7 +14,6 @@
 		0BBA269C2351208300E24193 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BBA269A2351208300E24193 /* LaunchScreen.storyboard */; };
 		0BBA26A72351208300E24193 /* Pursuit_Core_Persistence_LabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA26A62351208300E24193 /* Pursuit_Core_Persistence_LabTests.swift */; };
 		0BBA26B623513C4A00E24193 /* PictureSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA26B523513C4A00E24193 /* PictureSearchViewController.swift */; };
-		0BBA26B823513C6D00E24193 /* PictureSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA26B723513C6D00E24193 /* PictureSearchDetailViewController.swift */; };
 		0BBA26BA23513CAD00E24193 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA26B923513CAD00E24193 /* FavoritesTableViewController.swift */; };
 		0BBA26BC23513CD600E24193 /* FavoriteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA26BB23513CD600E24193 /* FavoriteDetailViewController.swift */; };
 		0BBA26BE23513E1B00E24193 /* PictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA26BD23513E1B00E24193 /* PictureModel.swift */; };
@@ -27,6 +26,7 @@
 		0BBA26CD23513F5D00E24193 /* ImagePersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA26CC23513F5D00E24193 /* ImagePersistenceHelper.swift */; };
 		0BBA26CF23513FB800E24193 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA26CE23513FB800E24193 /* FavoritesTableViewCell.swift */; };
 		0BBA26D123513FCE00E24193 /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA26D023513FCE00E24193 /* PictureCollectionViewCell.swift */; };
+		0BBA26D3235674C600E24193 /* PictureSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA26D2235674C600E24193 /* PictureSearchDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 		0BBA26A62351208300E24193 /* Pursuit_Core_Persistence_LabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pursuit_Core_Persistence_LabTests.swift; sourceTree = "<group>"; };
 		0BBA26A82351208300E24193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BBA26B523513C4A00E24193 /* PictureSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureSearchViewController.swift; sourceTree = "<group>"; };
-		0BBA26B723513C6D00E24193 /* PictureSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureSearchDetailViewController.swift; sourceTree = "<group>"; };
 		0BBA26B923513CAD00E24193 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		0BBA26BB23513CD600E24193 /* FavoriteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDetailViewController.swift; sourceTree = "<group>"; };
 		0BBA26BD23513E1B00E24193 /* PictureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureModel.swift; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 		0BBA26CC23513F5D00E24193 /* ImagePersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePersistenceHelper.swift; sourceTree = "<group>"; };
 		0BBA26CE23513FB800E24193 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		0BBA26D023513FCE00E24193 /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
+		0BBA26D2235674C600E24193 /* PictureSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureSearchDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBA26B523513C4A00E24193 /* PictureSearchViewController.swift */,
-				0BBA26B723513C6D00E24193 /* PictureSearchDetailViewController.swift */,
+				0BBA26D2235674C600E24193 /* PictureSearchDetailViewController.swift */,
 				0BBA26B923513CAD00E24193 /* FavoritesTableViewController.swift */,
 				0BBA26BB23513CD600E24193 /* FavoriteDetailViewController.swift */,
 			);
@@ -285,7 +285,7 @@
 				0BBA26B623513C4A00E24193 /* PictureSearchViewController.swift in Sources */,
 				0BBA26C223513E6500E24193 /* PictureAPIClient.swift in Sources */,
 				0BBA26C923513F2E00E24193 /* NetworkHelper.swift in Sources */,
-				0BBA26B823513C6D00E24193 /* PictureSearchDetailViewController.swift in Sources */,
+				0BBA26D3235674C600E24193 /* PictureSearchDetailViewController.swift in Sources */,
 				0BBA26C023513E2B00E24193 /* FavoritesModel.swift in Sources */,
 				0BBA26BA23513CAD00E24193 /* FavoritesTableViewController.swift in Sources */,
 				0BBA26BE23513E1B00E24193 /* PictureModel.swift in Sources */,
