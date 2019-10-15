@@ -132,8 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				0BBA26952351208100E24193 /* Main.storyboard */,
-				0BBA26CE23513FB800E24193 /* FavoritesTableViewCell.swift */,
 				0BBA26D023513FCE00E24193 /* PictureCollectionViewCell.swift */,
+				0BBA26CE23513FB800E24193 /* FavoritesTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,9 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				0BBA26B523513C4A00E24193 /* PictureSearchViewController.swift */,
-				0BBA26BB23513CD600E24193 /* FavoriteDetailViewController.swift */,
 				0BBA26B723513C6D00E24193 /* PictureSearchDetailViewController.swift */,
 				0BBA26B923513CAD00E24193 /* FavoritesTableViewController.swift */,
+				0BBA26BB23513CD600E24193 /* FavoriteDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
