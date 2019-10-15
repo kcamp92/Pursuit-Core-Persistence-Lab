@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct FavoritedPhotos: Codable {
+    let likes: Int?
+    let favorites: Int?
+    let tags: String?
+    let previewUrl: String?
+
+}
