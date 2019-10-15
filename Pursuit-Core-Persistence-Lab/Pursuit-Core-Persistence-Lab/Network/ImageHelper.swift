@@ -14,8 +14,8 @@ class ImageHelper {
     
     static let shared = ImageHelper()
     
-    func getImage(elementNum:String, completionHandler: @escaping(Result<UIImage, AppError>) -> ()){
-        let imageURL = "http://www.theodoregray.com/periodictable/Tiles/\(elementNum)/s7.JPG"
+    func getImage(imageSearched:String, completionHandler: @escaping(Result<UIImage, AppError>) -> ()){
+        let imageURL = "https://pixabay.com/api/?key=13914646-74defb60eef565463557ca2e6&q=\(imageSearched.lowercased())"
         
         guard let url = URL(string: imageURL) else {
             completionHandler(.failure(AppError.badURL))
@@ -35,4 +35,3 @@ class ImageHelper {
         }
     }
 }
-//"https://pixabay.com/api/?key=13914646-74defb60eef565463557ca2e6&q="\()"
