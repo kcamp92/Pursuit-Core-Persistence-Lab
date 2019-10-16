@@ -22,6 +22,7 @@ class PictureSearchDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLabels()
 
         // Do any additional setup after loading the view.
     }

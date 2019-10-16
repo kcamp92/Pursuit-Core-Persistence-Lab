@@ -70,10 +70,10 @@ class PictureSearchViewController: UIViewController, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyBoard = storyboard?.instantiateViewController(withIdentifier: "PictureSearchDetailViewController") as! PictureSearchDetailViewController
-        
+        storyBoard.imageDeets = pictures[indexPath.item]
+        navigationController?.pushViewController(storyBoard, animated: true)
+        }
      
-      
-    }
 // MARK: - SearchBar Functions
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -111,13 +111,3 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
     return CGSize.init(width: 350, height: 350)
     }
 }
-/* func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailStoryBoard = storyboard?.instantiateViewController(withIdentifier: "DetailViewControllerOne") as! DetailViewControllerOne
-        
-detailStoryBoard.passingInfo = pictures[indexPath.item]
-        
-        
-        navigationController?.pushViewController(detailStoryBoard, animated: true)
-    }
-}
-*/
