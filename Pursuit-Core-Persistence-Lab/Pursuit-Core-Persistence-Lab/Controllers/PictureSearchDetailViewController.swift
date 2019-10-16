@@ -23,8 +23,6 @@ class PictureSearchDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLabels()
-
-        // Do any additional setup after loading the view.
     }
     
 
@@ -64,14 +62,3 @@ class PictureSearchDetailViewController: UIViewController {
         }
     }
 }
-/*   func setUp() {
-     likesLabel.text =  passingInfo.likes == nil ? "That information is not available" : passingInfo.likes?.description
-        
-        favoritesLabel.text =  passingInfo.favorites == nil ? "That information is not available" : passingInfo.favorites?.description
-        tagsLabel.text =  passingInfo.tags == nil ? "That information is not available" : passingInfo.tags
-        previewURLLabel.text =  passingInfo.previewURL == nil ? "That information is not available" : passingInfo.previewURL
-        webFormatLabel.text =  passingInfo.webformatURL == nil ? "That information is not available" : passingInfo.webformatURL
-        
-}
-
-*/

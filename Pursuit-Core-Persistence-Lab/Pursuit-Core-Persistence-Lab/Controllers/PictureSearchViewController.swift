@@ -52,7 +52,7 @@ class PictureSearchViewController: UIViewController, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let image = pictures[indexPath.item]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! PictureCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! PictureCollectionViewCell
         if let imageUnwrapped = image.largeImageURL {
             ImageHelper.shared.getImage(urlStr: imageUnwrapped){ (result) in
                 DispatchQueue.main.async {
@@ -60,7 +60,7 @@ class PictureSearchViewController: UIViewController, UICollectionViewDataSource,
                     case .failure(let error):
                         print(error)
                     case .success(let imageFromOnline):
-                        cell.imageOutlet.image = imageFromOnline
+                        cell.imageOutlet.image = imageFromOnline 
                     }
                 }
             }
@@ -108,6 +108,6 @@ class PictureSearchViewController: UIViewController, UICollectionViewDataSource,
 
 extension PictureSearchViewController: UICollectionViewDelegateFlowLayout {
 func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize.init(width: 350, height: 350)
+    return CGSize.init(width: 200, height: 200)
     }
 }

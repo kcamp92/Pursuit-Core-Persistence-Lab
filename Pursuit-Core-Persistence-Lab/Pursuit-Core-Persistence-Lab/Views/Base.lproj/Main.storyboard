@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoriteCell" rowHeight="218" id="Eh2-9f-XM2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoriteCell" rowHeight="218" id="Eh2-9f-XM2" customClass="FavoritesTableViewCell" customModule="Pursuit_Core_Persistence_Lab" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="218"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eh2-9f-XM2" id="BgW-fu-m2D" customClass="FavoritesTableViewCell" customModule="Pursuit_Core_Persistence_Lab" customModuleProvider="target">
@@ -48,6 +48,10 @@
                                                 <constraint firstItem="xwW-FW-oze" firstAttribute="leading" secondItem="BgW-fu-m2D" secondAttribute="leading" id="woC-YH-gRZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favoriteImage" destination="xwW-FW-oze" id="GEa-ez-Zn1"/>
+                                            <outlet property="favoritesLabel" destination="Wth-aI-KVp" id="Yx6-De-opL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -70,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="586.95652173913049" y="96.428571428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorite Detail View Controller-->
         <scene sceneID="kaI-HW-53Z">
             <objects>
-                <viewController id="asD-3s-NLd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteDetailViewController" id="asD-3s-NLd" customClass="FavoriteDetailViewController" customModule="Pursuit_Core_Persistence_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G4A-Lj-pCU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,6 +120,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LZU-8E-4Fv"/>
                     </view>
+                    <connections>
+                        <outlet property="favoriteLabel" destination="ybt-GZ-dsT" id="IaD-9i-EVm"/>
+                        <outlet property="imageViewOutlet" destination="kiS-pk-ned" id="jfc-j8-Sto"/>
+                        <outlet property="likeLabel" destination="bA4-au-kUq" id="ou8-oQ-ybH"/>
+                        <outlet property="tagLabel" destination="Fw1-Xb-87R" id="wuN-kW-Tpu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYR-WB-cNa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,32 +143,32 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="v7W-8O-NdW">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8w3-pb-0oD">
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZdL-Wf-hcq">
-                                    <size key="itemSize" width="268" height="256"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hud-4Y-hbn">
+                                    <size key="itemSize" width="306" height="249"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="NeL-7Z-DG1" customClass="PictureCollectionViewCell" customModule="Pursuit_Core_Persistence_Lab" customModuleProvider="target">
-                                        <rect key="frame" x="73" y="0.0" width="268" height="256"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="oLY-Xb-0lx" customClass="PictureCollectionViewCell" customModule="Pursuit_Core_Persistence_Lab" customModuleProvider="target">
+                                        <rect key="frame" x="54" y="0.0" width="306" height="249"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4QJ-0Y-csU" customClass="PictureCollectionViewCell" customModule="Pursuit_Core_Persistence_Lab" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="268" height="256"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nZu-rz-35w">
+                                            <rect key="frame" x="0.0" y="0.0" width="306" height="249"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ifi-J9-bh8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="268" height="256"/>
+                                                    <rect key="frame" x="19" y="0.0" width="268" height="256"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="268" height="256"/>
+                                        <size key="customSize" width="306" height="249"/>
                                         <connections>
-                                            <outlet property="imageOutlet" destination="ifi-J9-bh8" id="j8q-rZ-fBp"/>
+                                            <outlet property="imageOutlet" destination="ifi-J9-bh8" id="o4E-r2-y7I"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -166,20 +176,19 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="v7W-8O-NdW" firstAttribute="trailing" secondItem="CoY-11-i1k" secondAttribute="trailing" id="6hW-Tx-4qA"/>
+                            <constraint firstItem="CoY-11-i1k" firstAttribute="trailing" secondItem="8w3-pb-0oD" secondAttribute="trailing" id="1tk-tp-oIJ"/>
                             <constraint firstItem="R3p-DW-eeT" firstAttribute="top" secondItem="CoY-11-i1k" secondAttribute="top" id="BFl-gq-Jzi"/>
+                            <constraint firstItem="8w3-pb-0oD" firstAttribute="leading" secondItem="CoY-11-i1k" secondAttribute="leading" id="BTc-oN-ROg"/>
                             <constraint firstItem="R3p-DW-eeT" firstAttribute="leading" secondItem="CoY-11-i1k" secondAttribute="leading" id="KqJ-TQ-JYD"/>
-                            <constraint firstItem="v7W-8O-NdW" firstAttribute="top" secondItem="R3p-DW-eeT" secondAttribute="bottom" id="Maf-IZ-v35"/>
-                            <constraint firstItem="v7W-8O-NdW" firstAttribute="top" secondItem="R3p-DW-eeT" secondAttribute="bottom" id="OYc-cL-wR5"/>
-                            <constraint firstItem="v7W-8O-NdW" firstAttribute="bottom" secondItem="CoY-11-i1k" secondAttribute="bottom" id="hoL-0b-xZk"/>
-                            <constraint firstItem="v7W-8O-NdW" firstAttribute="leading" secondItem="CoY-11-i1k" secondAttribute="leading" id="k7i-Wc-SQl"/>
+                            <constraint firstItem="CoY-11-i1k" firstAttribute="bottom" secondItem="8w3-pb-0oD" secondAttribute="bottom" id="QpP-WU-iLH"/>
+                            <constraint firstItem="8w3-pb-0oD" firstAttribute="top" secondItem="R3p-DW-eeT" secondAttribute="bottom" id="hxO-Ae-RX1"/>
                             <constraint firstItem="R3p-DW-eeT" firstAttribute="trailing" secondItem="CoY-11-i1k" secondAttribute="trailing" id="the-Hu-iHS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CoY-11-i1k"/>
                     </view>
                     <navigationItem key="navigationItem" id="glM-pG-FvH"/>
                     <connections>
-                        <outlet property="CollectionViewOutlet" destination="v7W-8O-NdW" id="udW-Sg-b3Q"/>
+                        <outlet property="CollectionViewOutlet" destination="8w3-pb-0oD" id="eRz-oh-wNu"/>
                         <outlet property="SearchBarOutlet" destination="R3p-DW-eeT" id="CTQ-IS-4LR"/>
                     </connections>
                 </viewController>
